@@ -12,7 +12,7 @@ ralph-main/
 │   ├── composer-instructions.md  # User guide for using Ralph with Composer
 │   ├── composer-prompt-template.md # Template for generating story prompts
 │   ├── composer-prompt.md        # Generated prompt for current story (gitignored)
-│   └── rules/                    # Cursor Rules for development (30 skills)
+│   └── rules/                    # Cursor Rules for development (31 skills)
 │       ├── README.md             # Index of all rules organized by category
 │       ├── prd-generation.md
 │       ├── ralph-task-workflow.md
@@ -65,7 +65,7 @@ ralph-main/
 ### Cursor Configuration
 - **`.cursor/composer-instructions.md`** - User guide for Composer workflow
 - **`.cursor/composer-prompt-template.md`** - Template for story prompts
-- **`.cursor/rules/`** - 30 comprehensive development skills/rules
+- **`.cursor/rules/`** - 31 comprehensive development skills/rules
 
 ### Reference Material
 - **`flowchart/`** - Interactive visualization source code
@@ -73,7 +73,7 @@ ralph-main/
 
 ## Cursor Rules Organization
 
-The `.cursor/rules/` directory contains 30 rules organized by category:
+The `.cursor/rules/` directory contains 31 rules organized by category:
 
 ### Core Workflow (5 rules)
 - `prd-generation.md`
@@ -96,13 +96,14 @@ The `.cursor/rules/` directory contains 30 rules organized by category:
 - `typescript.md`
 - `seo.md`
 
-### Services (6 rules)
+### Services (7 rules)
 - `stripe.md`
 - `coinbase-commerce.md`
 - `vercel.md`
 - `google-services.md`
 - `llms.md`
 - `llm-seo.md`
+- `mcp.md`
 
 ### Testing & Quality (2 rules)
 - `testing.md`

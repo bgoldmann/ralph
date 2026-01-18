@@ -7,6 +7,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [Unreleased]
 
 ### Added
+- Added `mcp.md` Cursor Rule - Model Context Protocol integration guide for connecting LLMs to external tools, data sources, and prompts
+- Added `mcp/SKILL.md` legacy skill file - MCP skills documentation for reference
 - Added `ralph-workflow.md` Cursor Rule - Complete guide to using Ralph and understanding `ralph.sh` script functionality
 - Added `prd-from-external.md` Cursor Rule - Guide for creating PRDs by analyzing websites or iOS apps
 - Added `seo.md` Cursor Rule - Comprehensive SEO guide for meta tags, structured data, sitemaps, and search engine optimization
@@ -15,8 +17,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Added `llm-seo.md` Cursor Rule - LLM-assisted SEO guide combining AI content generation with SEO optimization
 
 ### Changed
-- Updated rule count from 29 to 30 Cursor Rules
-- Updated `ORGANIZATION.md` to reflect Services now has 6 rules
+- Updated rule count from 30 to 31 Cursor Rules
+- Updated `.cursor/rules/README.md` to include MCP rule in Services & Integrations section
+- Updated `ORGANIZATION.md` to reflect Services now has 7 rules
 
 ## [Unreleased] (Previous)
 

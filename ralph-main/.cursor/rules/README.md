@@ -35,6 +35,7 @@ These rules can be referenced in your `.cursorrules` file or used directly when 
 - **google-services.md** - Google services integration guide for GCP, OAuth, Maps, Analytics, Drive, Sheets, and more
 - **llms.md** - Large Language Models integration guide for OpenAI, Anthropic, and other providers
 - **llm-seo.md** - LLM-assisted SEO guide for content optimization, SEO analysis, and AI-powered SEO workflows
+- **mcp.md** - Model Context Protocol integration guide for connecting LLMs to external tools, data sources, and prompts
 
 ### Testing & Quality
 - **testing.md** - Testing guide for unit tests, integration tests, E2E tests, and test patterns

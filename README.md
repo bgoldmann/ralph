@@ -39,7 +39,7 @@ Based on [Geoffrey Huntley's Ralph pattern](https://ghuntley.com/ralph/).
 
 - **[ralph-main/](ralph-main/)** - The active Ralph codebase for Cursor IDE
   - Contains the main `ralph.sh` script
-  - Includes 24 Cursor Rules for development
+  - Includes 31 Cursor Rules for development
   - Ready to use with Cursor IDE
 
 ## Reference Directory
