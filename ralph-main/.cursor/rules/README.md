@@ -22,16 +22,21 @@ These rules can be referenced in your `.cursorrules` file or used directly when 
 - **backend-development.md** - Backend development best practices for APIs, databases, security, and testing
 - **fastapi.md** - FastAPI development guide for routing, Pydantic models, dependencies, and API best practices
 - **supabase.md** - Comprehensive Supabase guide for authentication, database, real-time, and storage
+- **postgresql.md** - PostgreSQL guide for SQL queries, migrations, indexing, optimization, and transactions
+- **graphql.md** - GraphQL guide for schemas, queries, mutations, subscriptions, resolvers, and best practices
 
 ### Frontend Development
+- **react.md** - React development guide for components, hooks, state management, patterns, and performance
 - **nextjs.md** - Next.js development guide for App Router, Server Components, Server Actions, and routing
 - **typescript.md** - TypeScript guide for type safety, advanced types, generics, and type patterns
+- **tailwind-css.md** - Tailwind CSS guide for utility-first styling, responsive design, and modern UI development
 - **seo.md** - SEO guide for meta tags, structured data, sitemaps, and search engine optimization
 
 ### Services & Integrations
 - **stripe.md** - Stripe payment integration guide for one-time payments, subscriptions, webhooks, and billing
 - **coinbase-commerce.md** - Coinbase Commerce integration guide for cryptocurrency payments and webhooks
 - **vercel.md** - Vercel deployment guide for Next.js, serverless functions, edge functions, and optimization
+- **firebase.md** - Firebase integration guide for authentication, Firestore, storage, Cloud Functions, and real-time features
 - **google-services.md** - Google services integration guide for GCP, OAuth, Maps, Analytics, Drive, Sheets, and more
 - **llms.md** - Large Language Models integration guide for OpenAI, Anthropic, and other providers
 - **llm-seo.md** - LLM-assisted SEO guide for content optimization, SEO analysis, and AI-powered SEO workflows
@@ -39,6 +44,7 @@ These rules can be referenced in your `.cursorrules` file or used directly when 
 
 ### Testing & Quality
 - **testing.md** - Testing guide for unit tests, integration tests, E2E tests, and test patterns
+- **e2e-testing.md** - End-to-end testing guide for Playwright, Cypress, test patterns, and CI/CD integration
 - **agent-browser.md** - Browser automation for testing UI components
 
 ### DevOps & Tools

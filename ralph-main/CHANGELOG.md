@@ -7,6 +7,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [Unreleased]
 
 ### Added
+- Added `react.md` Cursor Rule - React development guide for components, hooks, state management, patterns, and performance
+- Added `tailwind-css.md` Cursor Rule - Tailwind CSS guide for utility-first styling, responsive design, and modern UI development
+- Added `graphql.md` Cursor Rule - GraphQL guide for schemas, queries, mutations, subscriptions, resolvers, and best practices
+- Added `postgresql.md` Cursor Rule - PostgreSQL guide for SQL queries, migrations, indexing, optimization, and transactions
+- Added `e2e-testing.md` Cursor Rule - End-to-end testing guide for Playwright, Cypress, test patterns, and CI/CD integration
+- Added `firebase.md` Cursor Rule - Firebase integration guide for authentication, Firestore, storage, Cloud Functions, and real-time features
 - Added `mcp.md` Cursor Rule - Model Context Protocol integration guide for connecting LLMs to external tools, data sources, and prompts
 - Added `mcp/SKILL.md` legacy skill file - MCP skills documentation for reference
 - Added `ralph-workflow.md` Cursor Rule - Complete guide to using Ralph and understanding `ralph.sh` script functionality
@@ -17,9 +23,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Added `llm-seo.md` Cursor Rule - LLM-assisted SEO guide combining AI content generation with SEO optimization
 
 ### Changed
-- Updated rule count from 30 to 31 Cursor Rules
-- Updated `.cursor/rules/README.md` to include MCP rule in Services & Integrations section
-- Updated `ORGANIZATION.md` to reflect Services now has 7 rules
+- Updated rule count from 32 to 37 Cursor Rules
+- Updated `.cursor/rules/README.md` to include React, Tailwind CSS, GraphQL, PostgreSQL, and E2E Testing rules
+- Updated `ORGANIZATION.md` to reflect Backend now has 5 rules, Frontend has 5 rules, and Testing has 3 rules
 
 ## [Unreleased] (Previous)
 

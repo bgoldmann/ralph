@@ -12,7 +12,7 @@ ralph-main/
 │   ├── composer-instructions.md  # User guide for using Ralph with Composer
 │   ├── composer-prompt-template.md # Template for generating story prompts
 │   ├── composer-prompt.md        # Generated prompt for current story (gitignored)
-│   └── rules/                    # Cursor Rules for development (31 skills)
+│   └── rules/                    # Cursor Rules for development (37 skills)
 │       ├── README.md             # Index of all rules organized by category
 │       ├── prd-generation.md
 │       ├── ralph-task-workflow.md
@@ -65,7 +65,7 @@ ralph-main/
 ### Cursor Configuration
 - **`.cursor/composer-instructions.md`** - User guide for Composer workflow
 - **`.cursor/composer-prompt-template.md`** - Template for story prompts
-- **`.cursor/rules/`** - 31 comprehensive development skills/rules
+- **`.cursor/rules/`** - 37 comprehensive development skills/rules
 
 ### Reference Material
 - **`flowchart/`** - Interactive visualization source code
@@ -73,7 +73,7 @@ ralph-main/
 
 ## Cursor Rules Organization
 
-The `.cursor/rules/` directory contains 31 rules organized by category:
+The `.cursor/rules/` directory contains 37 rules organized by category:
 
 ### Core Workflow (5 rules)
 - `prd-generation.md`
@@ -86,27 +86,33 @@ The `.cursor/rules/` directory contains 31 rules organized by category:
 - `frontend-design.md`
 - `ui-ux.md`
 
-### Backend (3 rules)
+### Backend (5 rules)
 - `backend-development.md`
 - `fastapi.md`
 - `supabase.md`
+- `postgresql.md`
+- `graphql.md`
 
-### Frontend (3 rules)
+### Frontend (5 rules)
+- `react.md`
 - `nextjs.md`
 - `typescript.md`
+- `tailwind-css.md`
 - `seo.md`
 
-### Services (7 rules)
+### Services (8 rules)
 - `stripe.md`
 - `coinbase-commerce.md`
 - `vercel.md`
+- `firebase.md`
 - `google-services.md`
 - `llms.md`
 - `llm-seo.md`
 - `mcp.md`
 
-### Testing & Quality (2 rules)
+### Testing & Quality (3 rules)
 - `testing.md`
+- `e2e-testing.md`
 - `agent-browser.md`
 
 ### DevOps (3 rules)
