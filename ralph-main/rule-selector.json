@@ -1,0 +1,90 @@
+{
+  "projectTypes": {
+    "website": {
+      "required": ["prd-generation", "ralph-workflow"],
+      "recommended": ["nextjs", "tailwind-css", "seo", "vercel"],
+      "optional": ["react", "typescript", "testing"]
+    },
+    "webapp": {
+      "required": ["prd-generation", "ralph-workflow"],
+      "recommended": ["react", "nextjs", "typescript", "tailwind-css", "backend-development"],
+      "optional": ["fastapi", "supabase", "postgresql", "testing", "e2e-testing"]
+    },
+    "ios": {
+      "required": ["prd-generation", "ralph-workflow", "ios-app"],
+      "recommended": ["testing", "security"],
+      "optional": ["firebase", "google-services"]
+    },
+    "android": {
+      "required": ["prd-generation", "ralph-workflow"],
+      "recommended": ["testing", "security"],
+      "optional": ["firebase", "google-services"]
+    },
+    "desktop": {
+      "required": ["prd-generation", "ralph-workflow"],
+      "recommended": ["security", "performance"],
+      "optional": ["testing", "docker"]
+    },
+    "cli": {
+      "required": ["prd-generation", "ralph-workflow"],
+      "recommended": ["testing"],
+      "optional": []
+    },
+    "api": {
+      "required": ["prd-generation", "ralph-workflow", "backend-development"],
+      "recommended": ["fastapi", "postgresql", "testing", "security"],
+      "optional": ["graphql", "docker", "cicd"]
+    },
+    "fullstack": {
+      "required": ["prd-generation", "ralph-workflow", "backend-development"],
+      "recommended": ["react", "nextjs", "typescript", "tailwind-css", "backend-development", "fastapi", "postgresql"],
+      "optional": ["supabase", "testing", "e2e-testing", "docker", "cicd"]
+    }
+  },
+  "techStackRules": {
+    "frontend": {
+      "nextjs": ["nextjs", "typescript", "seo"],
+      "react": ["react", "typescript"],
+      "vue": ["typescript"],
+      "angular": ["typescript"],
+      "vanilla": []
+    },
+    "backend": {
+      "fastapi": ["fastapi", "backend-development", "postgresql"],
+      "nodejs": ["backend-development"],
+      "express": ["backend-development"],
+      "django": ["backend-development", "postgresql"]
+    },
+    "database": {
+      "postgresql": ["postgresql"],
+      "mongodb": ["backend-development"],
+      "supabase": ["supabase", "postgresql"],
+      "firebase": ["firebase"]
+    },
+    "mobile": {
+      "native": ["ios-app"],
+      "react-native": ["react"],
+      "flutter": []
+    }
+  },
+  "featureRules": {
+    "auth": ["security"],
+    "payments": ["stripe", "coinbase-commerce"],
+    "realtime": ["supabase", "firebase"],
+    "analytics": ["google-services"],
+    "notifications": ["firebase", "google-services"],
+    "storage": ["supabase", "firebase"]
+  },
+  "deploymentRules": {
+    "vercel": ["vercel"],
+    "aws": ["docker", "cicd"],
+    "docker": ["docker"],
+    "netlify": [],
+    "heroku": ["docker"]
+  },
+  "testingRules": {
+    "unit": ["testing"],
+    "e2e": ["e2e-testing", "agent-browser"],
+    "browser": ["agent-browser", "e2e-testing"]
+  }
+}

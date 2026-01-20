@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Ralph Project Configuration Schema",
+  "description": "Configuration schema for Ralph universal template projects",
+  "type": "object",
+  "required": ["projectName", "projectType", "platform", "description"],
+  "properties": {
+    "projectName": {
+      "type": "string",
+      "description": "Name of the project",
+      "pattern": "^[a-zA-Z0-9-_]+$"
+    },
+    "projectType": {
+      "type": "string",
+      "enum": ["website", "webapp", "ios", "android", "desktop", "cli", "api", "fullstack"],
+      "description": "Type of project to build"
+    },
+    "platform": {
+      "type": "string",
+      "enum": ["web", "ios", "android", "desktop", "cli"],
+      "description": "Target deployment platform"
+    },
+    "techStack": {
+      "type": "object",
+      "properties": {
+        "frontend": {
+          "type": "string",
+          "enum": ["nextjs", "react", "vue", "angular", "vanilla", "none"],
+          "default": "none"
+        },
+        "backend": {
+          "type": "string",
+          "enum": ["fastapi", "nodejs", "express", "django", "none"],
+          "default": "none"
+        },
+        "database": {
+          "type": "string",
+          "enum": ["postgresql", "mongodb", "supabase", "firebase", "none"],
+          "default": "none"
+        },
+        "mobile": {
+          "type": "string",
+          "enum": ["native", "react-native", "flutter", "none"],
+          "default": "none"
+        }
+      },
+      "required": []
+    },
+    "features": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["auth", "payments", "realtime", "analytics", "notifications", "storage"]
+      },
+      "default": []
+    },
+    "deployment": {
+      "type": "string",
+      "enum": ["vercel", "aws", "docker", "netlify", "heroku", "none"],
+      "default": "none"
+    },
+    "testing": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["unit", "e2e", "browser"]
+      },
+      "default": []
+    },
+    "description": {
+      "type": "string",
+      "description": "Project description"
+    },
+    "branchName": {
+      "type": "string",
+      "description": "Git branch name for this project",
+      "pattern": "^[a-zA-Z0-9-_/]+$"
+    }
+  }
+}
