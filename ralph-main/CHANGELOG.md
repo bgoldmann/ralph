@@ -7,6 +7,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [Unreleased]
 
 ### Added
+- **Universal Template System** - Interactive CLI to scaffold projects for any platform
+  - `init-ralph.sh` - Interactive CLI tool for project initialization
+  - `scaffold.sh` - Project scaffolding engine
+  - `generate-prd-from-config.sh` - PRD generator from project configuration
+  - `project-config.schema.json` - Configuration schema for projects
+  - `rule-selector.json` - Maps project types and tech stacks to Cursor Rules
+  - `UNIVERSAL-TEMPLATE.md` - Comprehensive documentation for universal template system
+  - Template directory structure supporting websites, web apps, iOS, Android, desktop, CLI, API, and full stack projects
+  - Automatic rule selection based on project type and tech stack
+  - Project templates with starter code and configurations
+- Added `react.md` Cursor Rule - React development guide for components, hooks, state management, patterns, and performance
 - Added `react.md` Cursor Rule - React development guide for components, hooks, state management, patterns, and performance
 - Added `tailwind-css.md` Cursor Rule - Tailwind CSS guide for utility-first styling, responsive design, and modern UI development
 - Added `graphql.md` Cursor Rule - GraphQL guide for schemas, queries, mutations, subscriptions, resolvers, and best practices
@@ -23,6 +34,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Added `llm-seo.md` Cursor Rule - LLM-assisted SEO guide combining AI content generation with SEO optimization
 
 ### Changed
+- Updated main `README.md` to include Universal Template quick start guide
+- Created `ralph-main/README.md` with comprehensive documentation
 - Updated rule count from 32 to 37 Cursor Rules
 - Updated `.cursor/rules/README.md` to include React, Tailwind CSS, GraphQL, PostgreSQL, and E2E Testing rules
 - Updated `ORGANIZATION.md` to reflect Backend now has 5 rules, Frontend has 5 rules, and Testing has 3 rules

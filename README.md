@@ -23,7 +23,24 @@ This repository contains Ralph, an autonomous AI agent loop for Cursor IDE, alon
 
 **For Ralph (Cursor IDE version):**
 
-See [ralph-main/README.md](ralph-main/README.md) for setup and usage instructions.
+### Universal Template (Recommended)
+
+Use the interactive CLI to scaffold projects for any platform:
+
+```bash
+cd ralph-main
+./init-ralph.sh    # Interactive project setup
+./scaffold.sh      # Generate project structure
+./generate-prd-from-config.sh  # Create PRD
+cd <project-name>
+./ralph.sh         # Start development
+```
+
+See [ralph-main/UNIVERSAL-TEMPLATE.md](ralph-main/UNIVERSAL-TEMPLATE.md) for complete documentation.
+
+### Manual Setup
+
+See [ralph-main/README.md](ralph-main/README.md) for manual setup and usage instructions.
 
 **For reference materials:**
 

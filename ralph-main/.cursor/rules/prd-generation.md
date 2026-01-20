@@ -7,7 +7,18 @@ Use this guide when generating Product Requirements Documents (PRDs) for feature
 1. Receive a feature description from the user
 2. Ask 3-5 essential clarifying questions (with lettered options)
 3. Generate a structured PRD based on answers
-4. Save to `tasks/prd-[feature-name].md`
+4. Save to `tasks/prd-[feature-name].md` or `prd.json` (for Ralph workflow)
+
+## Using Project Configuration
+
+If `project-config.json` exists in the project root, you can use it to inform PRD generation:
+
+- **Project Type**: Use to determine appropriate story templates
+- **Tech Stack**: Reference when writing acceptance criteria
+- **Features**: Consider already-planned features when generating stories
+- **Platform**: Adapt stories for target platform (web, iOS, Android, etc.)
+
+To generate a PRD from `project-config.json`, use `generate-prd-from-config.sh` script, or manually create stories that align with the project configuration.
 
 **Important:** Do NOT start implementing. Just create the PRD.
 
