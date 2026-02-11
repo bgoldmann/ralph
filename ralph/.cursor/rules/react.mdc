@@ -1,0 +1,24 @@
+---
+description: React development guide (index). Full content split into react-components, react-hooks, react-state. Use when building React components, hooks, or UI.
+globs: "**/*.tsx, **/*.jsx"
+alwaysApply: false
+priority: 40
+---
+
+# React Development Guide (Index)
+
+The React guide is split into three focused rules (each under ~500 lines) for better composability and agent selection:
+
+| Rule | Content |
+|------|--------|
+| **react-components.mdc** | Components, composition, conditional rendering, lists & keys, best practices, common patterns, checklist |
+| **react-hooks.mdc** | useState, useEffect, useContext, useReducer, useMemo, useCallback, custom hooks, useRef |
+| **react-state.mdc** | State management patterns, event handling, forms, performance (memo, code splitting), error boundaries, testing |
+
+Use `@react-components`, `@react-hooks`, or `@react-state` for targeted context, or rely on auto-attach (same globs) so all three apply when working in `**/*.tsx` or `**/*.jsx` files.
+
+## Quick reference
+
+- **Components:** Functional components, TypeScript interfaces, composition, children/slots.
+- **Hooks:** See `react-hooks.mdc` for full hook API and examples.
+- **State & perf:** Lifting state, Context, memo, lazy, error boundaries – see `react-state.mdc`.

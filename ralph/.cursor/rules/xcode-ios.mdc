@@ -1,0 +1,85 @@
+---
+description: Xcode 26 developer tools, Coding Tools, Swift Build, and iOS development workflow. Use when working with Xcode, builds, debugging, or Apple tooling.
+globs: "**/*.swift, **/*.xcodeproj/**/*, **/*.xcworkspace/**/*, **/Package.swift"
+alwaysApply: false
+priority: 40
+---
+
+# Xcode 26 Developer Tools
+
+Guide for Xcode 26 (2026) tools, build system, LLM-powered coding assistance, and development workflow.
+
+## Xcode 26 Overview
+
+- **Coding Tools**: LLM-powered coding assistant—inline code changes, documentation generation, fixes via natural language
+- **Swift Build**: Xcode uses open-source Swift Build engine for builds
+- **Requirements**: Apple silicon + macOS Tahoe for full Coding Tools
+- **Download**: [Xcode 26 beta](https://developer.apple.com/download/)
+
+## Coding Tools (LLM Integration)
+
+- Natural-language code generation and inline edits
+- Documentation generation
+- Bug fixes and refactoring suggestions
+- Use when iterating on Swift/SwiftUI code in Xcode
+
+## Build System
+
+- **Swift Build**: open-source build engine used by Xcode
+- Faster incremental builds
+- Better build caching and parallelization
+
+## Editor & Workspace
+
+- Redesigned Tab experience
+- Improved navigation and workspace organization
+- Playground macro for previewing non-UI code interactively
+
+## Debugging & Performance
+
+- **Instruments**: ProcessorTrace, CPUCounter, SwiftUI instrument
+- Improved debugging tools
+- Profile CPU, power, and SwiftUI performance
+
+## Testing
+
+- Record/replay/maintain XCUIAutomation (XCTest UI) tests
+- Test plan replay across locales and devices
+- Use XCTest for unit and UI tests
+
+## Icon Composer
+
+- Multi-layer icon authoring
+- Dynamic previews
+- Use for Liquid Glass–compatible app icons
+
+## Cursor + iOS Development (Sweetpad, Inject)
+
+Develop iOS apps in Cursor with build, run, and hot-reload support:
+
+### Sweetpad
+- **VS Code / Cursor extension** – Build, run, and manage iOS apps from Cursor
+- Install Sweetpad, open `.xcodeproj` or `.xcworkspace`
+- Use Sweetpad commands: Build & Run, pick simulator/device, deploy
+- Optional: `xcode-build-server` (Homebrew) for autocomplete; `swiftformat` for formatting
+- [Sweetpad](https://github.com/sweetpad-dev/sweetpad)
+
+### Hot Reload (Inject / HotSwiftUI)
+- Combine **Inject** or **HotSwiftUI** with Sweetpad for live SwiftUI updates in simulator
+- Add to views for hot-reload: `@ObserveInjection var redraw` and `.enableInjection()` in body
+- Use InjectionIII macOS app or Inject library; HotSwiftUI provides SwiftUI helpers
+- Changes appear in simulator without full rebuild
+
+### When to Use Xcode
+- Signing, capabilities, entitlements
+- Interface Builder, Asset Catalogs
+- Debugging with breakpoints, Instruments
+- App Store Connect, TestFlight
+
+## Workflow Tips
+
+1. Use Xcode 26 beta for iOS 26 / Foundation Models development
+2. Enable Coding Tools for AI-assisted editing (Apple silicon + macOS Tahoe required)
+3. Use Sweetpad + Inject for Cursor-based iOS development and hot reload
+4. Profile with Instruments before release
+5. Use Icon Composer for new Liquid Glass–style icons

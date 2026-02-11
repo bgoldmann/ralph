@@ -1,0 +1,112 @@
+---
+description: React state management, event handling, forms, performance (memo, code splitting), error boundaries, and testing. Use with react-hooks and react-components.
+globs: "**/*.tsx, **/*.jsx"
+alwaysApply: false
+priority: 40
+---
+
+# React State, Performance & Testing
+
+Use with `react-hooks.mdc` and `react-components.mdc` for full React coverage.
+
+## State Management
+
+### Local State (useState/useReducer)
+
+Use for component-specific state. See `react-hooks.mdc` for useState/useReducer examples.
+
+### Context API (useContext)
+
+For shared state across the tree. See `react-hooks.mdc` for ThemeContext example.
+
+### Lifting State Up
+
+```typescript
+function TodoApp() {
+  const [todos, setTodos] = useState<Todo[]>([]);
+  const [filter, setFilter] = useState<'all' | 'active' | 'completed'>('all');
+  const filteredTodos = todos.filter(todo => {
+    if (filter === 'active') return !todo.completed;
+    if (filter === 'completed') return todo.completed;
+    return true;
+  });
+  return (
+    <div>
+      <TodoList todos={filteredTodos} onToggle={handleToggle} />
+      <TodoFilter filter={filter} onFilterChange={setFilter} />
+    </div>
+  );
+}
+```
+
+### External State
+
+For complex apps: Redux Toolkit, Zustand, Jotai, Recoil.
+
+## Event Handling
+
+```typescript
+const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => { e.preventDefault(); };
+const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => { e.preventDefault(); };
+const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => { /* e.target.value */ };
+const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => { if (e.key === 'Enter') {} };
+```
+
+## Forms
+
+- Use controlled components: `value={formData.field}` and `onChange` to update state.
+- Validate before submit; keep errors in state and display per field.
+- Use `e.preventDefault()` in `onSubmit`.
+
+## Performance Optimization
+
+### React.memo
+
+```typescript
+import { memo } from 'react';
+const ExpensiveComponent = memo(function ExpensiveComponent({ data, onAction }: Props) {
+  return <div>{/* Complex UI */}</div>;
+});
+```
+
+### Code Splitting
+
+```typescript
+import { lazy, Suspense } from 'react';
+const HeavyComponent = lazy(() => import('./HeavyComponent'));
+function App() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <HeavyComponent />
+    </Suspense>
+  );
+}
+```
+
+### Virtual Scrolling
+
+For long lists use `react-window` (FixedSizeList) to render only visible items.
+
+## Error Boundaries
+
+Class component required (no hook equivalent). Implement `getDerivedStateFromError` and `componentDidCatch`; render fallback UI when `hasError` is true.
+
+```typescript
+class ErrorBoundary extends Component<Props, State> {
+  static getDerivedStateFromError(error: Error) { return { hasError: true, error }; }
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) { /* log */ }
+  render() {
+    if (this.state.hasError) return this.props.fallback || <div>Something went wrong</div>;
+    return this.props.children;
+  }
+}
+```
+
+## Testing
+
+Use React Testing Library: `render()`, `screen.getByRole()`, `fireEvent`, `waitFor()`. Prefer queries by role and accessible name; avoid implementation details.
+
+## See also
+
+- `react-hooks.mdc` – useState, useEffect, useMemo, useCallback, useRef, custom hooks
+- `react-components.mdc` – Components, composition, conditional rendering, lists, best practices

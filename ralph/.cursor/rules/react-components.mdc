@@ -1,0 +1,161 @@
+---
+description: React components, composition, conditional rendering, lists and keys, best practices, and common patterns. Use when building React UI.
+globs: "**/*.tsx, **/*.jsx"
+alwaysApply: false
+priority: 40
+---
+
+# React Components Guide
+
+Use with `react-hooks.mdc` and `react-state.mdc` for full React coverage.
+
+## Overview
+
+React: component-based, declarative UI, virtual DOM, unidirectional data flow, hooks for state and lifecycle.
+
+## Setup & Installation
+
+### Vite (Recommended)
+
+```bash
+npm create vite@latest my-app -- --template react-ts
+cd my-app && npm install && npm run dev
+```
+
+### TypeScript
+
+```bash
+npm install --save-dev @types/react @types/react-dom
+```
+
+## Components
+
+### Functional Components
+
+```typescript
+interface ButtonProps {
+  label: string;
+  onClick: () => void;
+  variant?: 'primary' | 'secondary';
+}
+
+export function Button({ label, onClick, variant = 'primary' }: ButtonProps) {
+  return <button className={`btn btn-${variant}`} onClick={onClick}>{label}</button>;
+}
+```
+
+### Composition & Children
+
+```typescript
+interface CardProps {
+  children: React.ReactNode;
+  title?: string;
+  footer?: React.ReactNode;
+}
+
+export function Card({ children, title, footer }: CardProps) {
+  return (
+    <div className="card">
+      {title && <h3 className="card-title">{title}</h3>}
+      <div className="card-body">{children}</div>
+      {footer && <div className="card-footer">{footer}</div>}
+    </div>
+  );
+}
+```
+
+### Slot pattern (named children)
+
+```typescript
+interface LayoutProps {
+  header?: React.ReactNode;
+  sidebar?: React.ReactNode;
+  main: React.ReactNode;
+  footer?: React.ReactNode;
+}
+function Layout({ header, sidebar, main, footer }: LayoutProps) {
+  return (
+    <div className="layout">
+      {header && <header>{header}</header>}
+      <div className="content">
+        {sidebar && <aside>{sidebar}</aside>}
+        <main>{main}</main>
+      </div>
+      {footer && <footer>{footer}</footer>}
+    </div>
+  );
+}
+```
+
+## Conditional Rendering
+
+- Early return: `if (!user) return <div>Please log in</div>;`
+- Ternary: `{user.isAdmin ? <AdminPanel /> : <UserPanel />}`
+- Logical AND: `{user.isVerified && <Badge />}`
+
+## Lists & Keys
+
+Use stable, unique keys (e.g. `todo.id`). Avoid index as key when list can reorder.
+
+```typescript
+{todos.map(todo => (
+  <TodoItem key={todo.id} todo={todo} />
+))}
+```
+
+## Best Practices
+
+### Component organization
+
+```
+components/
+├── Button/Button.tsx, Button.test.tsx, Button.module.css
+├── Card/index.ts
+└── utils/helpers.ts
+```
+
+### Props: types, defaults, destructuring
+
+- Define interfaces; use default values in destructuring.
+- Destructure props in signature: `function UserCard({ name, email }: Props)`.
+
+### Immutable state updates
+
+- Never mutate: `setItems([...items, newItem])`, `setUser({ ...user, profile: { ...user.profile, name } })`.
+
+### Extract complex logic
+
+Put business logic in custom hooks (e.g. `useTodos()`) and keep components presentational.
+
+### TypeScript
+
+Define interfaces for props and data; use strict types for event handlers.
+
+## Common Patterns
+
+### Controlled vs uncontrolled
+
+- Controlled: `value={state}` + `onChange` to update state.
+- Uncontrolled: `ref` and read from DOM when needed.
+
+### Compound components
+
+Use Context to share state between parent and children (e.g. Tabs + TabList + Tab).
+
+## Checklist for React Development
+
+- [ ] Components typed with TypeScript
+- [ ] Props have sensible defaults
+- [ ] State updates are immutable
+- [ ] useEffect has correct deps and cleanup
+- [ ] useMemo/useCallback for expensive ops
+- [ ] Lists have stable unique keys
+- [ ] Error boundaries where needed
+- [ ] Tests with React Testing Library
+- [ ] Accessibility (aria-*, role, alt)
+- [ ] No direct DOM mutations outside refs
+
+## See also
+
+- `react-hooks.mdc` – useState, useEffect, useReducer, useMemo, useCallback, useRef
+- `react-state.mdc` – State patterns, events, forms, performance, error boundaries, testing

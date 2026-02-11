@@ -1,0 +1,13 @@
+---
+description: Core engineering standards applied to every request. Keep code maintainable and test-covered.
+alwaysApply: true
+priority: 10
+---
+
+# Core Engineering Standards
+
+- Write maintainable, readable, convention-driven code.
+- Prefer clarity over cleverness.
+- Always generate or update tests for new logic, refactors, or bug fixes.
+- Avoid new dependencies unless necessary.
+- When no specific rule applies, follow existing codebase patterns.

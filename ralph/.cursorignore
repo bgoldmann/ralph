@@ -1,0 +1,9 @@
+# Ralph .cursorignore – exclude from Cursor indexing
+archive/
+node_modules/
+flowchart/node_modules/
+*.log
+.cursor/composer-prompt.md
+.last-branch
+progress.txt
+prd.json
