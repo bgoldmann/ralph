@@ -1,13 +1,11 @@
 # Ralph Codebase Organization
 
-This document outlines the organization and structure of the Ralph codebase in this directory (`ralph-main/`).
-
-**Note:** This repository also contains `amp-skills-main/` (at the repository root), which holds the original Amp CLI skills. Those skills have been converted to Cursor Rules in `.cursor/rules/` and are kept for reference only.
+This document outlines the organization and structure of the Ralph codebase in this directory (`ralph/`).
 
 ## Directory Structure
 
 ```
-ralph-main/
+ralph/
 ├── .cursor/                      # Cursor IDE configuration
 │   ├── composer-instructions.md  # User guide for using Ralph with Composer
 │   ├── composer-prompt-template.md # Template for generating story prompts

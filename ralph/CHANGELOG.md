@@ -7,6 +7,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [Unreleased]
 
 ### Added
+- **Project organization** – Root-level docs and structure alignment
+  - Root `CHANGELOG.md` – Project-level changelog with link to this file
+  - Root `ORGANIZATION.md` – Repository structure overview
+  - `flowchart/README.md` – Ralph-specific flowchart app documentation (replaces generic Vite template)
 - **iOS rules & skills 2026 updates** – Research-based concrete updates to close gaps
   - **ios-app.mdc**: Observation framework (@Observable, @Bindable) replacing ObservableObject; Swift 6 note; NavigationSplitView; Modern SwiftUI APIs (ViewThatFits, scrollTargetBehavior, SF Symbols 5, sensoryFeedback); Accessibility section; Dependency injection; Reserved names (avoid Task); Lazy containers with stable IDs
   - **xcode-ios.mdc**: Cursor + Sweetpad + Inject/HotSwiftUI for iOS development in Cursor with hot reload
@@ -61,6 +65,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Added `llm-seo.md` Cursor Rule - LLM-assisted SEO guide combining AI content generation with SEO optimization
 
 ### Changed
+- **Repository structure** – Root README updated with `ralph/` paths for commands, files, and docs; ORGANIZATION.md paths updated (removed ralph-main/amp-skills-main references)
 - **ralph-workflow** – fully agent-driven; use `/ralph-workflow` in Agent chat instead of `./ralph.sh`
 - **ralph.sh** – deprecated; kept for interactive/human-in-the-loop use
 - Upgraded all 37 rules with YAML frontmatter: `description`, `globs`, `alwaysApply` for 2026 Apply Intelligently activation
